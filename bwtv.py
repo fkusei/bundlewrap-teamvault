@@ -161,7 +161,12 @@ def _file(secret_id=None, site=None):
 
 
 def file(secret_id, site="default"):
-    return Fault("bwtv file", _file, secret_id=secret_id, site=site)
+    return Fault(
+        "bwtv file " + secret_id,
+        _file,
+        secret_id=secret_id,
+        site=site,
+    )
 
 
 def _file_as_base64(secret_id=None, site=None):
@@ -174,7 +179,7 @@ def _file_as_base64(secret_id=None, site=None):
 
 def file_as_base64(secret_id, site="default"):
     return Fault(
-        "bwtv file_as_base64",
+        "bwtv file_as_base64 " + secret_id,
         _file_as_base64,
         secret_id=secret_id,
         site=site,
@@ -197,7 +202,7 @@ def _htpasswd_entry(secret_id=None, site=None):
 
 def htpasswd_entry(secret_id, site="default"):
     return Fault(
-        "bwtv htpasswd_entry",
+        "bwtv htpasswd_entry " + secret_id,
         _htpasswd_entry,
         secret_id=secret_id,
         site=site,
@@ -213,7 +218,12 @@ def _password(secret_id=None, site=None):
 
 
 def password(secret_id, site="default"):
-    return Fault("bwtv password", _password, secret_id=secret_id, site=site)
+    return Fault(
+        "bwtv password" + secret_id,
+        _password,
+        secret_id=secret_id,
+        site=site,
+    )
 
 
 def _password_crypt_sha512(secret_id=None, site=None):
@@ -230,7 +240,7 @@ def _password_crypt_sha512(secret_id=None, site=None):
 
 def password_crypt_sha512(secret_id, site="default"):
     return Fault(
-        "bwtv password_crypt_sha512",
+        "bwtv password_crypt_sha512 " + secret_id,
         _password_crypt_sha512,
         secret_id=secret_id,
         site=site,
@@ -246,7 +256,12 @@ def _username(secret_id=None, site=None):
 
 
 def username(secret_id, site="default"):
-    return Fault("bwtv username", _username, secret_id=secret_id, site=site)
+    return Fault(
+        "bwtv username " + secret_id,
+        _username,
+        secret_id=secret_id,
+        site=site,
+    )
 
 
 def _format(fault=None, format_string=None):
